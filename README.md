@@ -81,3 +81,21 @@ exp12/
 2. Open the project in **Android Studio** (Koala or newer).
 3. Sync Gradle and build the project (`Build > Make Project`).
 4. Run the app on an Android Emulator or physical device (requires active internet connection).
+
+---
+
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="Screenshot_20261106_123043.png" alt="Web Service Explorer home screen" width="250">
+    </td>
+    <td align="center">
+      <img src="Screenshot_20261106_123105.png" alt="Web Service Explorer GET response" width="250">
+    </td>
+    <td align="center">
+      <img src="Screenshot_20261106_123115.png" alt="Web Service Explorer POST response" width="250">
+    </td>
+  </tr>
+</table>
