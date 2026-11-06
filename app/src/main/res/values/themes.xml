@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Exp12" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/navy_background</item>
+        <item name="colorPrimary">@color/electric_blue</item>
+        <item name="colorSecondary">@color/neon_purple</item>
+        <item name="android:statusBarColor">@color/navy_background</item>
+        <item name="android:navigationBarColor">@color/navy_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Theme.Exp12" parent="Base.Theme.Exp12" />
+</resources>

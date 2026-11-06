@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Web Service Explorer</string>
+    <string name="api_connected">API Connected</string>
+    <string name="subtitle">Explore. Request. Receive.</string>
+    <string name="hero_title">HTTP Request Studio</string>
+    <string name="hero_subtitle">Interact with live web services and inspect real-time responses.</string>
+    <string name="create_request_title">Create Request</string>
+    <string name="get_button">GET REQUEST</string>
+    <string name="post_button">POST REQUEST</string>
+    <string name="response_dashboard_title">Response Dashboard</string>
+    <string name="empty_response_title">Ready to Explore</string>
+    <string name="empty_response_subtitle">Tap GET or POST above to execute an HTTP request and inspect live payload results.</string>
+    <string name="copy_response">Copy Response</string>
+    <string name="clear_response">Clear</string>
+</resources>

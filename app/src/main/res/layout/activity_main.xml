@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_background"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Top Navigation -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Logo Icon Container -->
+                <FrameLayout
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_card">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Logo"
+                        android:src="@android:drawable/ic_menu_compass"
+                        app:tint="@color/electric_blue" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/subtitle"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Status Indicator Badge -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/badge_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="6dp">
+
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:background="@drawable/bg_get_button" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="@string/api_connected"
+                        android:textColor="@color/success_green"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Hero Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hero_title"
+                    android:textColor="@color/text_primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/hero_subtitle"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Request Control Panel -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_request_title"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Select HTTP Method to execute live request"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+
+                <!-- Buttons Layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <!-- GET Request Button Container -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_get_button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:contentDescription="Download"
+                                android:src="@android:drawable/stat_sys_download"
+                                app:tint="@color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:text="@string/get_button"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Method Badge -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/badge_background"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="GET"
+                            android:textColor="@color/badge_get_text"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btnGet"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:minHeight="0dp"
+                            android:minWidth="0dp" />
+                    </RelativeLayout>
+
+                    <!-- POST Request Button Container -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/bg_post_button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:contentDescription="Upload"
+                                android:src="@android:drawable/stat_sys_upload"
+                                app:tint="@color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:text="@string/post_button"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Method Badge -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/badge_background"
+                            android:paddingHorizontal="10dp"
+                            android:paddingVertical="4dp"
+                            android:text="POST"
+                            android:textColor="@color/badge_post_text"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btnPost"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:minHeight="0dp"
+                            android:minWidth="0dp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Response Dashboard Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Header row for Response Dashboard -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/response_dashboard_title"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <!-- Clear Button -->
+                    <TextView
+                        android:id="@+id/btnClear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:padding="4dp"
+                        android:text="@string/clear_response"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <!-- Response Meta Bar (Status & Time) -->
+                <LinearLayout
+                    android:id="@+id/layoutMetaBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <!-- Status Badge -->
+                    <TextView
+                        android:id="@+id/tvStatusBadge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/badge_background"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="5dp"
+                        android:text="200 OK"
+                        android:textColor="@color/success_green"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!-- Method Indicator -->
+                    <TextView
+                        android:id="@+id/tvMethodIndicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/badge_background"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="5dp"
+                        android:text="GET"
+                        android:textColor="@color/badge_get_text"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <!-- Response Time -->
+                    <TextView
+                        android:id="@+id/tvResponseTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="142 ms"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Loading Progress Bar -->
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_marginTop="16dp"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/electric_blue"
+                    android:visibility="gone" />
+
+                <!-- Empty State Container -->
+                <LinearLayout
+                    android:id="@+id/layoutEmptyState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingVertical="36dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:contentDescription="Empty"
+                        android:src="@android:drawable/ic_menu_agenda"
+                        app:tint="@color/text_muted" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/empty_response_title"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="260dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center"
+                        android:text="@string/empty_response_subtitle"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Parsed Results Container -->
+                <LinearLayout
+                    android:id="@+id/layoutParsedResults"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Parsed Payload"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <!-- Grid of cards for User ID, Post ID -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <!-- User ID Card -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_code_viewer"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="USER ID"
+                                android:textColor="@color/text_muted"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvUserId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="1"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <!-- Post ID Card -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_code_viewer"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="POST ID"
+                                android:textColor="@color/text_muted"
+                                android:textSize="10sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tvPostId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="1"
+                                android:textColor="@color/text_primary"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Title Card -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_code_viewer"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TITLE"
+                            android:textColor="@color/text_muted"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Sample Title"
+                            android:textColor="@color/text_primary"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <!-- Body Card -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_code_viewer"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="BODY / CONTENT"
+                            android:textColor="@color/text_muted"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvBody"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Sample body content goes here..."
+                            android:textColor="@color/text_primary"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Raw JSON Code Editor Viewer Section -->
+                <LinearLayout
+                    android:id="@+id/layoutRawJson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Raw JSON Response"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                        <!-- Copy Response Button -->
+                        <TextView
+                            android:id="@+id/btnCopy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:drawableStart="@android:drawable/ic_menu_send"
+                            android:drawablePadding="4dp"
+                            android:text="@string/copy_response"
+                            android:textColor="@color/electric_blue"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Code Editor Panel -->
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_code_viewer"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:id="@+id/tvRawJson"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:text="{\n  &quot;userId&quot;: 1,\n  &quot;id&quot;: 1,\n  &quot;title&quot;: &quot;...&quot;\n}"
+                            android:textColor="@color/code_text"
+                            android:textSize="13sp" />
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
