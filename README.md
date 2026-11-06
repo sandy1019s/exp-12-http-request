@@ -90,12 +90,21 @@ exp12/
   <tr>
     <td align="center">
       <img src="Screenshot_20261106_123043.png" alt="Web Service Explorer home screen" width="250">
+      <br>
+      <strong>Request Studio Dashboard</strong><br>
+      Choose GET or POST requests and view the connected API dashboard with parsed response details.
     </td>
     <td align="center">
       <img src="Screenshot_20261106_123105.png" alt="Web Service Explorer GET response" width="250">
+      <br>
+      <strong>Successful GET Request</strong><br>
+      Displays the <code>200 OK</code> response, parsed post data, response time, and raw JSON output.
     </td>
     <td align="center">
       <img src="Screenshot_20261106_123115.png" alt="Web Service Explorer POST response" width="250">
+      <br>
+      <strong>Successful POST Request</strong><br>
+      Displays the <code>201 Created</code> response with the submitted payload and returned JSON data.
     </td>
   </tr>
 </table>
